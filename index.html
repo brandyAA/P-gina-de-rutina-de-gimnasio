@@ -3,84 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <title>Rutina de Gimnasio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
+            margin: 0;
+            background: linear-gradient(135deg, #0f172a, #020617);
             color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #22c55e;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #cbd5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
             padding: 20px;
         }
-        h1 {
-            color: #00ff88;
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
+
+        .card {
+            background: #020617;
+            border: 1px solid #22c55e33;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #22c55e22;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #22c55e;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
+
         th, td {
-            border: 1px solid #00ff88;
-            padding: 10px;
-            text-align: center;
+            padding: 12px;
+            border-bottom: 1px solid #22c55e33;
         }
+
         th {
-            background-color: #00ff88;
+            background-color: #22c55e;
             color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+            color: #94a3b8;
+            margin-top: 40px;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>🏋️ Rutina de Gimnasio Semanal</h1>
-    <p>Objetivo: Bajar grasa y ganar músculo.</p>
+<header>
+    <h1>🏋️ Rutina Profesional de Gimnasio</h1>
+    <p>Objetivo: Reducir grasa corporal y ganar masa muscular</p>
+</header>
+
+<div class="container">
 
     <h2>📅 Rutina Semanal</h2>
-
     <table>
         <tr>
             <th>Día</th>
-            <th>Ejercicios</th>
+            <th>Entrenamiento</th>
         </tr>
-        <tr>
-            <td>Lunes</td>
-            <td>Pecho y tríceps</td>
-        </tr>
-        <tr>
-            <td>Martes</td>
-            <td>Espalda y bíceps</td>
-        </tr>
-        <tr>
-            <td>Miércoles</td>
-            <td>Piernas</td>
-        </tr>
-        <tr>
-            <td>Jueves</td>
-            <td>Hombros y abdomen</td>
-        </tr>
-        <tr>
-            <td>Viernes</td>
-            <td>Cardio + Abdomen</td>
-        </tr>
-        <tr>
-            <td>Sábado</td>
-            <td>Rutina ligera o descanso</td>
-        </tr>
-        <tr>
-            <td>Domingo</td>
-            <td>Descanso</td>
-        </tr>
+        <tr><td>Lunes</td><td>Pecho y Tríceps</td></tr>
+        <tr><td>Martes</td><td>Espalda y Bíceps</td></tr>
+        <tr><td>Miércoles</td><td>Piernas</td></tr>
+        <tr><td>Jueves</td><td>Hombros y Abdomen</td></tr>
+        <tr><td>Viernes</td><td>Cardio + Abdomen</td></tr>
+        <tr><td>Sábado</td><td>Rutina ligera</td></tr>
+        <tr><td>Domingo</td><td>Descanso</td></tr>
     </table>
 
-    <h2>💪 Consejos</h2>
-    <ul>
-        <li>Beber mucha agua</li>
-        <li>Comer proteína</li>
-        <li>Dormir mínimo 7 horas</li>
-        <li>Hacer cardio 20-30 minutos</li>
-    </ul>
+    <h2>💡 Consejos Fitness</h2>
 
-    <h2>👨‍💻 Creado por</h2>
-    <p>Brandy Alcántara - Estudiante de Desarrollo de Software ITLA</p>
+    <div class="cards">
+        <div class="card">
+            <h3>🥗 Alimentación</h3>
+            <p>Consume proteínas, reduce azúcar y bebe 2 litros de agua diarios.</p>
+        </div>
+
+        <div class="card">
+            <h3>💤 Descanso</h3>
+            <p>Duerme mínimo 7-8 horas para mejorar el crecimiento muscular.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏃 Cardio</h3>
+            <p>Realiza 20-30 minutos de cardio para quemar grasa.</p>
+        </div>
+
+        <div class="card">
+            <h3>📈 Progreso</h3>
+            <p>Registra tu peso y medidas semanalmente.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Creado por Brandy Alcántara | Estudiante de Desarrollo de Software ITLA</p>
+</footer>
 
 </body>
 </html>
+
